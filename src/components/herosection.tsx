@@ -5,7 +5,7 @@ import { Button } from "./ui/button"
 export default function Herosection (){
     return(
         <main>
-<div className="relative mb-14">
+<div className="relative md:mb-14 ">
   <Image
     src={"/heroo.jpg"}
     width={1440}
@@ -21,7 +21,7 @@ export default function Herosection (){
     className="md:hidden absolute inset-0 w-full object-cover"
   />
   <div className="relative text-center md:text-left text-white p-32">
-    <h5 className="font-bold text-sm mt-16">SUMMER 2020</h5>
+    <h5 className="font-bold text-sm md:mt-16">SUMMER 2020</h5>
     <h1 className="font-bold text-4xl md:text-5xl my-9">NEW COLLECTION</h1>
     <h3 className="font-semibold text-lg">We Know how large objects will act,</h3>
     <h3 className="font-semibold text-lg mb-5">but things on small scale</h3>
@@ -30,7 +30,7 @@ export default function Herosection (){
 </div>
 
 
-<section className="bg-[#FAFAFA] mx-11 md:mx-0 md:p-28">
+<section className="bg-[#FAFAFA] md:py-0 py-44 px-11 md:px-0 md:p-28">
 <div className="flex flex-col text-center">
   <h1 className="font-bold  text-3xl">EDITORS PICK</h1>
   <p className="text-[#737373] mb-9">Problems trying to resolve the conflict</p>
