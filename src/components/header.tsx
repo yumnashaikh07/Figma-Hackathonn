@@ -87,7 +87,7 @@ export default function Header() {
   <SheetTrigger><AlignRight className="mb-3" size={24}/></SheetTrigger>
   <SheetContent>
       <nav>
-        <ul className="text-center mt-56 space-y-5 font-bold text-3xl">
+        <ul className="text-center mt-20 space-y-5 font-bold text-3xl">
           <li>
             <Link href={"/"} className=" text-gray-500  hover:text-gray-600 hover:font-semibold">
               Home
@@ -96,7 +96,7 @@ export default function Header() {
           <li>
             <Link href={"/shop"}>
               <DropdownMenu>
-                <DropdownMenuTrigger className=" ml-52 flex text-gray-500  hover:text-gray-600 hover:font-semibold">
+                <DropdownMenuTrigger className=" ml-[115px] flex text-gray-500  hover:text-gray-600 hover:font-semibold">
                   Shop
                   <ChevronDown className="mt-1" />
                 </DropdownMenuTrigger>
@@ -134,13 +134,13 @@ export default function Header() {
         </ul>
       </nav>
       <div className="flex text-center flex-col gap-y-5 font-semibold text-3xl mt-7 text-[#23A6F0]">
-            <div className="flex justify-between "><User className=" ml-20"size={42}/><h3 className="font-bold mr-32">Login/Register</h3></div>
-            <Search size={42} className="ml-56"/>
+            <div className="flex justify-between "><User className=" ml-7 mt-1"size={30}/><h5 className="font-base mr-11">Login/Register</h5></div>
+            <Search size={42} className="ml-36"/>
             <Link href={""} className="flex justify-between">
-            <ShoppingCart size={42} className="ml-56" /><p className="text-xs mr-52 mt-7">1</p>
+            <ShoppingCart size={42} className="ml-36" /><p className="text-xs mr-32 mt-7">1</p>
           </Link>
           <Link href={""} className="flex justify-between">
-            <Heart size={42}  className="ml-56"/><p className="text-xs mr-52 mt-7">1</p>
+            <Heart size={42}  className="ml-36"/><p className="text-xs mr-32 mt-7">1</p>
           </Link>
         </div>
   </SheetContent>

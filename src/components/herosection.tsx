@@ -20,7 +20,7 @@ export default function Herosection (){
     alt=""
     className="md:hidden absolute inset-0 w-full object-cover"
   />
-  <div className="relative text-center md:text-left text-white p-32">
+  <div className="relative text-center md:text-left text-white p-16 md:p-32">
     <h5 className="font-bold text-sm md:mt-16">SUMMER 2020</h5>
     <h1 className="font-bold text-4xl md:text-5xl my-9">NEW COLLECTION</h1>
     <h3 className="font-semibold text-lg">We Know how large objects will act,</h3>
@@ -69,7 +69,7 @@ export default function Herosection (){
             <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
             <p className="text-gray-400 font-bold mb-3">English Department</p>
             <p className="text-gray-400  font-bold">$16.48<span className="text-[#23856D] font-bold">$6.48</span></p>
-            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="ml-20"/>
+            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="md:ml-20 mx-auto"/>
           </div>
 </div>
 
@@ -79,7 +79,7 @@ export default function Herosection (){
             <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
             <p className="text-gray-400 font-bold mb-3">English Department</p>
             <p className="text-gray-400  font-bold">$16.48<span className="text-[#23856D] font-bold">$6.48</span></p>
-            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="ml-20"/>
+            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="md:ml-20 mx-auto"/>
           </div>
 </div>
 
@@ -89,7 +89,7 @@ export default function Herosection (){
             <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
             <p className="text-gray-400 font-bold mb-3">English Department</p>
             <p className="text-gray-400  font-bold">$16.48<span className="text-[#23856D] font-bold">$6.48</span></p>
-            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="ml-20"/>
+            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="md:ml-20 mx-auto"/>
           </div>
 </div>
 
@@ -99,7 +99,7 @@ export default function Herosection (){
             <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
             <p className="text-gray-400 mr-5 font-bold mb-3">English Department</p>
             <p className="text-gray-400 ml-5 font-bold">$16.48<span className="text-[#23856D] font-bold">$6.48</span></p>
-            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="ml-20"/>
+            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="md:ml-20 mx-auto"/>
           </div>
 </div>
 </section>
@@ -114,7 +114,7 @@ export default function Herosection (){
             <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
             <p className="text-gray-400 font-bold mb-3">English Department</p>
             <p className="text-gray-400  font-bold">$16.48<span className="text-[#23856D] font-bold">$6.48</span></p>
-            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="ml-20"/>
+            <Image src={"/product-colors.png"} width={82} height={16} alt=""className="md:ml-20 mx-auto"/>
           </div>
 </div>
 
@@ -124,7 +124,7 @@ export default function Herosection (){
             <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
             <p className="text-gray-400 font-bold mb-3">English Department</p>
             <p className="text-gray-400  font-bold">$16.48<span className="text-[#23856D] font-bold">$6.48</span></p>
-            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="ml-20"/>
+            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="md:ml-20 mx-auto"/>
           </div>
 </div>
 
@@ -134,7 +134,7 @@ export default function Herosection (){
             <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
             <p className="text-gray-400 font-bold mb-3">English Department</p>
             <p className="text-gray-400  font-bold">$16.48<span className="text-[#23856D] font-bold">$6.48</span></p>
-            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="ml-20"/>
+            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="md:ml-20 mx-auto"/>
           </div>
 </div>
 
@@ -144,7 +144,7 @@ export default function Herosection (){
             <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
             <p className="text-gray-400 mr-5 font-bold mb-3">English Department</p>
             <p className="text-gray-400 ml-5 font-bold">$16.48<span className="text-[#23856D] font-bold">$6.48</span></p>
-            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="ml-20"/>
+            <Image src={"/product-colors.png"} width={82} height={16} alt="" className="md:ml-20 mx-auto"/>
           </div>
 </div>
       </section>
