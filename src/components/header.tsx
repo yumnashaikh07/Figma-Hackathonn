@@ -9,9 +9,6 @@ import {
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { ChevronDown, Heart, Search, ShoppingCart,AlignRight, User } from "lucide-react";
@@ -80,21 +77,72 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="flex justify-between  space-x-5 md:hidden">
-      <Search size={24}/>
-          <Link href={""}>
-            <ShoppingCart  size={24} />
-          </Link>
+
+{/* SMALL SCREEN SHEET SECTION */}
+
+
+      <div className="md:hidden">
+
           <Sheet>
   <SheetTrigger><AlignRight className="mb-3" size={24}/></SheetTrigger>
   <SheetContent>
-    <SheetHeader>
-      <SheetTitle>Are you absolutely sure?</SheetTitle>
-      <SheetDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </SheetDescription>
-    </SheetHeader>
+      <nav>
+        <ul className="text-center mt-56 space-y-5 font-bold text-3xl">
+          <li>
+            <Link href={"/"} className=" text-gray-500  hover:text-gray-600 hover:font-semibold">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href={"/shop"}>
+              <DropdownMenu>
+                <DropdownMenuTrigger className=" ml-52 flex text-gray-500  hover:text-gray-600 hover:font-semibold">
+                  Shop
+                  <ChevronDown className="mt-1" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuLabel>Categories</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem><Link  href={"/shop"}>Shop</Link></DropdownMenuItem>
+                  <DropdownMenuItem><Link  href={"/product"}>Product</Link></DropdownMenuItem>
+                  <DropdownMenuItem><Link  href={"/pricing"}>Pricing</Link></DropdownMenuItem>
+                  <DropdownMenuItem><Link  href={"/team"}>Team</Link></DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </Link>
+          </li>
+          <li>
+            <Link href={"/about"} className=" text-gray-500  hover:text-gray-600 hover:font-semibold">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href={"/"} className=" text-gray-500  hover:text-gray-600 hover:font-semibold">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link href={"/contact"} className=" text-gray-500  hover:text-gray-600 hover:font-semibold">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link href={"/shop"} className=" text-gray-500 hover:text-gray-600 hover:font-semibold">
+              Pages
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="flex text-center flex-col gap-y-5 font-semibold text-3xl mt-7 text-[#23A6F0]">
+            <div className="flex justify-between "><User className=" ml-20"size={42}/><h3 className="font-bold mr-32">Login/Register</h3></div>
+            <Search size={42} className="ml-56"/>
+            <Link href={""} className="flex justify-between">
+            <ShoppingCart size={42} className="ml-56" /><p className="text-xs mr-52 mt-7">1</p>
+          </Link>
+          <Link href={""} className="flex justify-between">
+            <Heart size={42}  className="ml-56"/><p className="text-xs mr-52 mt-7">1</p>
+          </Link>
+        </div>
   </SheetContent>
 </Sheet>
       </div>

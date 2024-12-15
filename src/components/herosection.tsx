@@ -5,49 +5,63 @@ import { Button } from "./ui/button"
 export default function Herosection (){
     return(
         <main>
-          <div className="relative mb-14">
+<div className="relative mb-14">
   <Image
     src={"/heroo.jpg"}
     width={1440}
     height={716}
     alt=""
-    className="absolute inset-0 w-full object-cover"
+    className=" md:flex hidden md:absolute md:inset-0 md:w-full md:object-cover"
   />
-  <div className="relative text-white p-32">
+   <Image
+    src={"/hero2.jpg"}
+    width={414}
+    height={716}
+    alt=""
+    className="md:hidden absolute inset-0 w-full object-cover"
+  />
+  <div className="relative text-center md:text-left text-white p-32">
     <h5 className="font-bold text-sm mt-16">SUMMER 2020</h5>
-    <h1 className="font-bold text-5xl my-9">NEW COLLECTION</h1>
+    <h1 className="font-bold text-4xl md:text-5xl my-9">NEW COLLECTION</h1>
     <h3 className="font-semibold text-lg">We Know how large objects will act,</h3>
     <h3 className="font-semibold text-lg mb-5">but things on small scale</h3>
-    <Button className="bg-green-500 rounded-sm px-14 py-5"><Link href={"/shop"}>SHOP NOW</Link></Button>
+    <Button className="bg-green-500 rounded-sm px-9 py-6"><Link href={"/shop"}>SHOP NOW</Link></Button>
   </div>
 </div>
 
 
-<section className="bg-[#FAFAFA] p-28">
+<section className="bg-[#FAFAFA] mx-11 md:mx-0 md:p-28">
 <div className="flex flex-col text-center">
   <h1 className="font-bold  text-3xl">EDITORS PICK</h1>
   <p className="text-[#737373] mb-9">Problems trying to resolve the conflict</p>
  
   </div>
-  <div className="flex justify-between ">    
-    <div><Image src={"/filter.png"} width={510} height={500} alt=""/></div>
-    <div><Image src={"/editor2.png"} width={240} height={500} alt=""/></div>
+<div className="grid grid-cols-1 md:flex md:justify-between ">    
+    <div><Image src={"/filter.png"} width={510} height={500} alt="" className=" hidden md:flex"/></div>
+    <div><Image src={"/filter02.png"} width={324} height={500} alt="" className="md:hidden "/></div>
+    <div><Image src={"/editor2.png"} width={240} height={500} alt=""className=" hidden md:flex"/></div>
+    <div><Image src={"/editor02.png"} width={324} height={500} alt="" className="md:hidden my-7"/></div>
     <div className="flex flex-col space-y-5">
-      <Image src={"/editor3a.png"} width={240} height={242} alt=""/>
-      <Image src={"/editor3b.png"} width={240} height={242} alt=""/>
-    </div></div>
+    <div>
+      <Image src={"/editor3a.png"} width={240} height={242} alt=""className=" hidden md:flex"/>
+      <Image src={"/editor03a.png"} width={324} height={242} alt="" className="md:hidden "/>
+    </div>
+
+    <div>
+      <Image src={"/editor3b.png"} width={240} height={242} alt=""className=" hidden md:flex"/>
+      <Image src={"/editor03b.png"} width={324} height={242} alt="" className="md:hidden "/></div>
+    </div>
+  </div>
 </section>  
  
-  <section className="bg-white">
-  <div className=" flex flex-col text-center justify-center">
+<section className="bg-white">
+  <div className=" flex flex-col md:px-0 px-11 text-center justify-center">
   <h5 className="text-xl font-semibold  mt-16 text-[#737373]">Featured Products</h5>
-  <h1 className="font-bold text-3xl">BESTSELLER PRODUCTS</h1>
+  <h1 className="font-bold text-3xl  my-3">BESTSELLER PRODUCTS</h1>
   <p className="text-[#737373]">Problems trying to resolve the conflict</p>
   </div>
                                  {/* CARDS */}
-
-
-<section className="flex justify-between space-x-5 text-center p-24">
+<section className="grid grid-cols-1 md:grid-cols-4 md:space-y-0 space-y-5 space-x-0 md:space-x-5 text-center p-24">
 <div>
             <Image src={"/herocard011.png"} width={240} height={427} alt=""/>
    
@@ -92,7 +106,7 @@ export default function Herosection (){
                                  {/* CARDS SECTION:02 */}
 
 
-<section className="flex justify-between space-x-5 text-center p-24">
+<section className="grid grid-cols-1 md:grid-cols-4 md:space-y-0 space-y-5 space-x-0 md:space-x-5 text-center p-24">
 <div>
             <Image src={"/herocard055.png"} width={240} height={427} alt=""/>
    
@@ -140,8 +154,8 @@ export default function Herosection (){
 
 
 </section>
-<section className="bg-[#23856D] h-[570px]  text-white flex justify-between ">
-<div className="p-20 ml-28">
+<section className="bg-[#23856D] md:h-[570px]  text-white grid grid-cols-1 md:grid-cols-2 ">
+<div className="p-20 md:ml-28">
     <h5 className="font-semibold text-sm text-gray-300 mt-5">SUMMER 2020</h5>
             <h1 className="font-bold text-6xl mt-9">Vita Classic</h1>
             <h1 className="font-bold text-6xl mb-9">Product</h1>
@@ -159,36 +173,45 @@ export default function Herosection (){
   width={370}
   height={395}
   alt=""
-  className="mt-[73px]"
+  className="md:mt-[73px]"
   />
 </div>
 </section>
-<section className="flex justify-between space-x-5">
-  <div>
-    <Image src={"/row.png"} width={600} height={682} alt="img"/>
+<section className=" grid grid-cols-1 md:grid-cols-2 md:space-x-5">
+  <div className="hidden md:flex">
+    <Image src={"/row.png"} width={600} height={682} alt="img" />
   </div>
   <div className="p-20">
     <h5 className="font-bold text-sm text-[#BDBDBD] mt-16">SUMMER 2020</h5>
             <h1 className="font-bold text-5xl my-9">Part of the Neural Universe</h1>
             <h3 className="font-semibold text-lg text-[#737373] ">We Know how large objects will act,</h3>
             <h3 className="font-semibold text-lg mb-3 text-[#737373]">but things on small scale</h3>
-            <div className="flex justify-between text-xl">
-            <Button className="bg-green-500 text-white rounded-sm py-5 ">ADD TO CART</Button>
-            <Button className="border-2 bg-white rounded-sm py-[18px] text-green-500 border-green-500 mr-[300px]">READ MORE</Button>
+            <div className="grid grid-cols-1 md:flex md:justify-between text-xl">
+            <Button className="bg-[#23A6F0] md:bg-green-500 text-white rounded-sm   md:my-0 my-3 py-7 md:py-5 ">ADD TO CART</Button>
+            <Button className="border-2 bg-white rounded-sm  py-6 md:py-[18px] text-[#23A6F0] border-[#23A6F0] md:text-green-500 md:border-green-500 md:mr-[200px]">READ MORE</Button>
             </div>
+  </div>
+  <div className="md:hidden">
+    <Image src={"/herow02.png"}width={600} height={682}  alt="img" />
   </div>
 </section>
 
 <section className="flex justify-center mt-28 flex-col text-center">
+  <div className="md:px-0 px-16 ">
   <h5 className=" text-[#23A6F0] font-bold ">Practice Advice</h5>
   <h1 className="text-4xl font-bold mb-5">Featured Posts</h1>
-  <p className="text-[#737373] ">Problems trying to resolve the conflict between</p>
-  <p className="text-[#737373] ">the two major realms of Classical physics: Newtonisan mechanics</p>
+  <p className="text-[#737373] md:mb-0 mb-14 ">Problems trying to resolve the conflict between</p>
+  <p className="text-[#737373] md:flex hidden ">the two major realms of Classical physics: Newtonisan mechanics</p>
+  </div>
+<div className="grid grid-cols-1 md:grid-cols-3 space-x-0 space-y-3 md:space-y-0 md:space-x-3 md:p-28  mx-11 md:mx-0">
+<Image src={"/hero1.png"} width={328} height={606} alt="" className="md:flex hidden"/>
+<Image src={"/hero01.png"} width={328} height={606} alt="" className="md:hidden"/>
 
-<div className="flex justify-between space-x-3 p-28">
-<Image src={"/hero1.png"} width={328} height={606} alt=""/>
-<Image src={"/hero2.png"} width={328} height={606} alt="" />
-<Image src={"/hero3.png"} width={328} height={606} alt=""/>
+<Image src={"/hero2.png"} width={328} height={606} alt="" className="md:flex hidden"/>
+<Image src={"/hero02.png"} width={328} height={606} alt="" className="md:hidden"/>
+
+<Image src={"/hero3.png"} width={328} height={606} alt="" className="md:flex hidden"/>
+<Image src={"/hero03.png"} width={328} height={606} alt="" className="md:hidden"/>
 </div>
 </section>
 

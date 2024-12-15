@@ -24,9 +24,9 @@ export default function Shop() {
      <Herobanner  /></div>
       <Header />
       <section className="bg-gray-50">
-        <header className="flex justify-between mx-auto md:mx-16">
+        <header className="flex justify-between md:px-0 px-11  md:mx-16">
           <div className="flex text-cent py-7  justify-between h-24">
-            <h1 className="text-black font-bold text-3xl">Shop</h1>
+            <h1 className="text-black  font-bold text-3xl">Shop</h1>
           </div>
           <Breadcrumb>
             <BreadcrumbList className="text-lg mt-7">
@@ -42,7 +42,7 @@ export default function Shop() {
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-<section className="flex justify-between space-x-5 p-5 md:mx-16">
+<section className="grid grid-cols-1 md:grid-cols-5 mx-auto gap-y-5 md:gap-x-5 md:p-5 ">
     <Image  src={"/card01.png"} width={254} height={238} alt="img"className=""/>
     <Image  src={"/card02.png"} width={254} height={238} alt="img"className=""/>
     <Image  src={"/card03.png"} width={254} height={238} alt="img"className=""/>
@@ -51,18 +51,21 @@ export default function Shop() {
 
 </section>
       </section>
-      <section className="flex justify-between p-10 md:mx-16">
+      <section className="grid grid-cols-1 md:grid-cols-4  md:mx-16">
+
         <div>
           <h3 className="text-gray-500 mt-2 font-bold text-lg">
             Showing All 12 results
           </h3>
         </div>
+
         <div className="flex justify-between  ">
           <h3 className="text-gray-500 font-bold text-lg mr-10 mt-2">Views:</h3>
           <div className="flex justify-between space-x-2">
             <Image src={"/btn.png"} width={50} height={50} alt="button"/>
             <Image src={"/btn24.png"} width={50} height={50} alt="button"/></div>
         </div>
+
         <div>
           <Select>
             <SelectTrigger className=" text-gray-500 font-semibold  px-3 py-5 focus:outline-none">
@@ -75,6 +78,7 @@ export default function Shop() {
             </SelectContent>
           </Select>
         </div>
+
         <div>
           <Button className="bg-[#23A6F0] text-white px-5 py-5 mr-24 rounded-sm  ">Filter</Button>
         </div>

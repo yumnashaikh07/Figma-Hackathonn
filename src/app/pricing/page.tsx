@@ -125,12 +125,12 @@ export default function Pricing (){
 <p className="text-[#737373] font-semibold mb-11">the two major realms of Classical physics</p></section>
 </section>
 
-<section className=" grid md:grid-cols-2 grid-cols-1 md:px-48 md:mx-auto mx-11 md:space-x-10 py-9 ">
-  <section>
+<section className=" grid md:grid-cols-2 grid-cols-1  md:space-x-9 md:px-32 md:mx-0 mx-10 py-9 ">
+  <section  className="mr-9">
   <div className="flex flex-col mb-16">
   <div className="text-[#737373] flex justify-between">
   <ChevronRight className="text-[#23A6F0] " size={24}/>
-    <h1 className="text-[#252B42] text-xl font-bold">the quick fox jumps over the lazy dog</h1></div>
+    <h1 className="text-[#252B42] text-xl md:mr-44 font-bold">the quick fox jumps over the lazy dog</h1></div>
     <div className="text-[#737373] ">
     <p>Met minim Mollie non desert Alamo est sit cliquey 
 dolor do met sent. RELIT official consequent door ENIM 
@@ -141,7 +141,7 @@ nostrum met.</p></div>
   <div className="flex flex-col mb-16">
   <div className="text-[#737373] flex justify-between">
   <ChevronRight className="text-[#23A6F0] " size={24}/>
-    <h1 className="text-[#252B42] text-xl font-bold">the quick fox jumps over the lazy dog</h1></div>
+    <h1 className="text-[#252B42] text-xl md:mr-44 font-bold">the quick fox jumps over the lazy dog</h1></div>
     <div className="text-[#737373] ">
     <p>Met minim Mollie non desert Alamo est sit cliquey 
 dolor do met sent. RELIT official consequent door ENIM 
@@ -153,7 +153,7 @@ nostrum met.</p></div>
   <div className="flex flex-col mb-16">
   <div className="text-[#737373] flex justify-between">
   <ChevronRight className="text-[#23A6F0] " size={24}/>
-    <h1 className="text-[#252B42] text-xl font-bold">the quick fox jumps over the lazy dog</h1></div>
+    <h1 className="text-[#252B42] text-xl md:mr-44 font-bold">the quick fox jumps over the lazy dog</h1></div>
     <div className="text-[#737373] ">
     <p>Met minim Mollie non desert Alamo est sit cliquey 
 dolor do met sent. RELIT official consequent door ENIM 
@@ -166,7 +166,7 @@ nostrum met.</p></div>
 <div className="flex flex-col mb-16">
   <div className="text-[#737373] flex justify-between">
   <ChevronRight className="text-[#23A6F0] " size={24}/>
-    <h1 className="text-[#252B42] text-xl font-bold">the quick fox jumps over the lazy dog</h1></div>
+    <h1 className="text-[#252B42] text-xl md:mr-32 mr-[35px] font-bold">the quick fox jumps over the lazy dog</h1></div>
     <div className="text-[#737373] ">
     <p>Met minim Mollie non desert Alamo est sit cliquey 
 dolor do met sent. RELIT official consequent door ENIM 
@@ -178,7 +178,7 @@ nostrum met.</p></div>
   <div className="flex flex-col mb-16">
   <div className="text-[#737373] flex justify-between">
   <ChevronRight className="text-[#23A6F0] " size={24}/>
-    <h1 className="text-[#252B42] text-xl font-bold">the quick fox jumps over the lazy dog</h1></div>
+    <h1 className="text-[#252B42] text-xl md:mr-32 mr-[35px] font-bold">the quick fox jumps over the lazy dog</h1></div>
     <div className="text-[#737373] ">
     <p>Met minim Mollie non desert Alamo est sit cliquey 
 dolor do met sent. RELIT official consequent door ENIM 
@@ -190,7 +190,7 @@ nostrum met.</p></div>
   <div className="flex flex-col mb-16">
   <div className="text-[#737373] flex justify-between">
   <ChevronRight className="text-[#23A6F0] " size={24}/>
-    <h1 className="text-[#252B42] text-xl font-bold">the quick fox jumps over the lazy dog</h1></div>
+    <h1 className="text-[#252B42] text-xl md:mr-32 mr-[35px] font-bold">the quick fox jumps over the lazy dog</h1></div>
     <div className="text-[#737373] ">
     <p>Met minim Mollie non desert Alamo est sit cliquey 
 dolor do met sent. RELIT official consequent door ENIM 

@@ -1,8 +1,6 @@
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import Link from "next/link"
@@ -45,8 +43,7 @@ export default function Headertype2 (){
           <Sheet>
   <SheetTrigger><AlignRight className="mb-3" size={24}/></SheetTrigger>
   <SheetContent>
-    <SheetHeader>
-      <SheetDescription>
+
       <nav>
         <ul className="flex flex-col md:hidden md:gap-x-7  mt-20 gap-y-5 text-3xl md:text-lg">
           <li>
@@ -71,8 +68,7 @@ export default function Headertype2 (){
           </li>
         </ul>
          </nav>
-      </SheetDescription>
-    </SheetHeader>
+
   </SheetContent>
 </Sheet>
       </div>
