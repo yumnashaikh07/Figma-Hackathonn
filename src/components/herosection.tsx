@@ -38,12 +38,12 @@ export default function Herosection() {
 
       <section className="bg-[#FAFAFA] md:py-0 py-44 px-11 md:px-0 md:p-28">
         <div className="flex flex-col text-center">
-          <h1 className="font-bold  text-3xl">EDITORS PICK</h1>
+          <h1 className="font-bold  md:mt-5 mt-16 text-3xl">EDITORS PICK</h1>
           <p className="text-[#737373] mb-9">
             Problems trying to resolve the conflict
           </p>
         </div>
-        <div className="grid grid-cols-1 md:flex md:justify-between ">
+        <div className="grid grid-cols-1 md:flex md:justify-between  md:px-20">
           <div>
             <Image
               src={"/filter.png"}
@@ -354,7 +354,7 @@ export default function Herosection() {
           <p className="text-[#737373] md:mb-0 mb-14 ">
             Problems trying to resolve the conflict between
           </p>
-          <p className="text-[#737373] md:flex hidden ">
+          <p className="text-[#737373] md:flex justify-center  hidden ">
             the two major realms of Classical physics: Newtonisan mechanics
           </p>
         </div>

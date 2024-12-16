@@ -105,14 +105,14 @@ export default function Product() {
 
       <div className="text-[#ECECEC] w-[1049px] hidden md:flex ml-20 border-[1px] "></div>
 
-      <section className=" grid grid-cols-1 md:grid-cols-3 md:px-0 px-7 my-9 md:p-14 md:space-x-3 ">
+      <section className=" grid grid-cols-1 md:grid-cols-3 md:px-5 px-9 my-9 md:p-14 md:space-x-3 ">
         <div>
           <Image
             src={"/pr0duct22.png"}
             width={332}
             height={392}
             alt=""
-            className="md:flex hidden"
+            className="md:flex ml-16 hidden"
           />
           <Image
             src={"/productmain2.png"}
@@ -126,12 +126,12 @@ export default function Product() {
           <h1 className="text-gray-700 text-2xl font-bold md:mt-0 mt-11 mb-5 ">
             the quick fox jumps over
           </h1>
-          <p className="text-[#737373]  mb-5">
+          <p className="text-[#737373]  mb-9">
             Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
             RELIT official consequent door ENIM RELIT Mollie. Excitation venial
             consequent sent nostrum met.
           </p>
-          <p className="text-[#737373] mb-5">
+          <p className="text-[#737373] mb-9">
             Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
             RELIT official consequent door ENIM RELIT Mollie. Excitation venial
             consequent sent nostrum met.
@@ -143,22 +143,22 @@ export default function Product() {
           </p>
         </div>
         <div className=" flex flex-col ">
-          <h1 className="text-gray-700 text-2xl font-bold mb-7">
+          <h1 className="text-gray-700 text-2xl md:mt-0 mt-9 font-bold mb-7">
             the quick fox jumps over
           </h1>
-          <p className="text-[#737373] flex mb-5">
+          <p className="text-[#737373] flex  md:mb-5 mb-3">
             <ChevronRight />
             the quick fox jumps over the lazy dog
           </p>
-          <p className="text-[#737373]  flex mb-5">
+          <p className="text-[#737373]  flex md:mb-5 mb-3">
             <ChevronRight />
             the quick fox jumps over the lazy dog
           </p>
-          <p className="text-[#737373] flex mb-5">
+          <p className="text-[#737373] flex md:mb-5 mb-3">
             <ChevronRight />
             the quick fox jumps over the lazy dog
           </p>
-          <p className="text-[#737373] flex mb-9">
+          <p className="text-[#737373] flex md:mb-9 mb-3">
             <ChevronRight />
             the quick fox jumps over the lazy dog
           </p>
@@ -166,15 +166,15 @@ export default function Product() {
           <h1 className="text-gray-700 text-2xl font-bold mb-7">
             the quick fox jumps over
           </h1>
-          <p className="text-[#737373]  flex mb-5">
+          <p className="text-[#737373]  flex md:mb-5 mb-3">
             <ChevronRight />
             the quick fox jumps over the lazy dog
           </p>
-          <p className="text-[#737373]  flex mb-5">
+          <p className="text-[#737373]  flex md:mb-5 mb-3">
             <ChevronRight />
             the quick fox jumps over the lazy dog
           </p>
-          <p className="text-[#737373]  flex mb-5">
+          <p className="text-[#737373]  flex md:mb-5 mb-3">
             <ChevronRight />
             the quick fox jumps over the lazy dog
           </p>
