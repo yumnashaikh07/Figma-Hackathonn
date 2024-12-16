@@ -4,7 +4,7 @@ import Herosection from "@/components/herosection";
 
 export default function Home() {
   return (
-    <main className="mx-auto">
+    <main >
       <div className="bg-slate-900">
       <Herobanner  /></div>
       <Header/>
