@@ -6,7 +6,7 @@ export default function Headertype2() {
   return (
     <main className="mx-auto">
       <header className="md:bg-white bg-[#F6F6F6] flex text-center py-7 p-5 md:p-28 justify-between h-24 ">
-        <div className="text-black font-bold text-3xl">Bandage</div>
+        <div className="text-black font-bold text-3xl">Luxerays</div>
         <nav>
           <ul className="md:flex hidden md:gap-x-7  text-lg">
             <li>

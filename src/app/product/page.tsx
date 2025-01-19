@@ -1,20 +1,115 @@
-import Herobanner from "@/components/herobanner";
-import Header from "@/components/header";
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronRight, Eye, Heart, ShoppingCart } from "lucide-react";
+// import Herobanner from "@/components/herobanner";
+// import Header from "@/components/header";
+// import Image from "next/image";
+// import Link from "next/link";
+// import { ChevronRight, Eye, Heart, ShoppingCart } from "lucide-react";
+// import {
+//   Breadcrumb,
+//   BreadcrumbItem,
+//   BreadcrumbLink,
+//   BreadcrumbList,
+//   BreadcrumbSeparator,
+// } from "@/components/ui/breadcrumb";
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button";
 export default function Product() {
   return (
-    <main className="mx-auto">
-      <div className="bg-[#23856D]">
+    <main className="mx-auto flex justify-between p-20">
+      <section id="contact" className="bg-black h-[500px]  md:w-[500px]  ">
+          <div className="container mx-auto py-14 px-16">
+            <h2 className="text-3xl font-bold text-center text-white mb-8">
+              Contact Us
+            </h2>
+            <form className="max-w-lg mx-auto shadow-lg rounded-lg">
+              <div className="mb-4">
+                <label
+                  htmlFor="name"
+                  className=" font-semibold text-white text-base"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  className="w-full mb-3 border-b-2 border-gray-300  bg-transparent focus:outline-none focus:ring-0 focus:border-red-600 "
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="email"
+                  className="text-base font-semibold text-white"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  className="mb-3 w-full border-b-2 border-gray-300  focus:outline-none focus:ring-0 focus:border-red-600  bg-transparent"
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="message"
+                  className="text-base font-semibold text-white"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={1}
+                  className="mb-3 w-full border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-red-600  bg-transparent"
+                />
+              </div>
+              <button
+                type="submit"
+                className=" text-base hover:text-red-600  text-white "
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </section>
+        <section>
+        <Accordion type="single" collapsible className="" >
+  <AccordionItem value="item-1">
+    <AccordionTrigger className='text-xl font-bold'>FAQS</AccordionTrigger>
+    <AccordionContent>
+    <AccordionItem value="item-3">
+    <AccordionTrigger className='text-xl font-bold'>FAQS</AccordionTrigger>
+    <AccordionContent>
+    
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-4">
+    <AccordionTrigger className='text-xl font-bold'>FAQS</AccordionTrigger>
+    <AccordionContent>
+    
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-5">
+    <AccordionTrigger className='text-xl font-bold'>FAQS</AccordionTrigger>
+    <AccordionContent>
+    
+    </AccordionContent>
+  </AccordionItem>
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+{/* <div className='space-x-5'>
+<Button className="bg-[#e6c93d] mt-5 text-base md:rounded-sm px-16 md:px-9 rounded-lg py-8 md:py-6">Add to Cart</Button>
+<Button className="text-[#e6c93d]  bg-white border-[#e6c93d] border-[3px] mt-5 text-base md:rounded-sm px-16 md:px-5 rounded-lg py-8 md:py-6">Add to Wishlist</Button></div> */}
+
+        </section>
+    </main>
+  );
+}
+
+      {/* <div className="bg-[#23856D]">
         <Herobanner />
       </div>
       <Header />
@@ -250,7 +345,6 @@ export default function Product() {
             </div>
           </div>
 
-          {/* CARDS SECTION  02     */}
           <div className="grid grid-cols-1 md:flex md:justify-between md:space-x-3 space-x-0 md:space-y-0 space-y-5 md:px-0 px-10 mt-9  text-center ">
             <div>
               <Image src={"/prcard5.png"} width={277} height={347} alt="" />
@@ -360,7 +454,5 @@ export default function Product() {
             className=" md:w-[150px] md:h-[190px] h-[290px] w-[250px]"
           />
         </div>
-      </section>
-    </main>
-  );
-}
+      </section> */}
+      

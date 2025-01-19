@@ -1,42 +1,47 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import HeroCards from "./herocards";
+
 export default function Herosection() {
   return (
     <main>
       <div className="relative md:mb-14 ">
         <Image
-          src={"/heroo.jpg"}
-          width={1440}
-          height={716}
+          src={"/herosection1.jpg"}
+          layout="fill"
+          objectFit="cover"
           alt=""
-          className=" md:flex hidden md:absolute md:inset-0 md:w-full md:object-cover"
+          className=" md:flex hidden md:absolute md:inset-0  "
         />
         <Image
+        //  src={"/herosection1.jpg"}
+        //  layout="fill"
+        //  objectFit="cover"
           src={"/hero2.jpg"}
           width={414}
           height={716}
           alt=""
           className="md:hidden absolute inset-0 w-full object-cover"
         />
-        <div className="relative text-center md:text-left text-white p-16 md:p-32">
-          <h5 className="font-bold text-sm md:mt-16">SUMMER 2020</h5>
-          <h1 className="font-bold text-4xl md:text-5xl my-9">
+        <div className="relative text-center md:text-left text-white p-7 md:p-32">
+          <h5 className="font-bold text-sm md:mt-16  mt-52">SUMMER 2020</h5>
+          <h1 className="font-bold text-5xl  md:text-5xl my-9">
             NEW COLLECTION
           </h1>
-          <h3 className="font-semibold text-lg">
+          <h3 className="md:font-semibold text-xl md:text-lg">
             We Know how large objects will act,
           </h3>
-          <h3 className="font-semibold text-lg mb-5">
+          <h3 className="md:font-semibold text-xl md:text-lg mb-9 md:mb-5">
             but things on small scale
           </h3>
-          <Button className="bg-green-500 rounded-sm px-9 py-6">
-            <Link href={"/shop"}>SHOP NOW</Link>
+          <Button className="bg-[#e6c93d] md:rounded-sm px-16 md:px-9 rounded-lg py-8 md:py-6">
+            <Link href={"/shop"} className="text-xl font-semibold">SHOP NOW</Link>
           </Button>
         </div>
       </div>
 
-      <section className="bg-[#FAFAFA] md:py-0 py-44 px-11 md:px-0 md:p-28">
+      <section className="bg-[#fff] md:py-0 py-44 px-11 md:px-0 md:p-28">
         <div className="flex flex-col text-center">
           <h1 className="font-bold  md:mt-5 mt-16 text-3xl">EDITORS PICK</h1>
           <p className="text-[#737373] mb-9">
@@ -44,16 +49,17 @@ export default function Herosection() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:flex md:justify-between  md:px-20">
+          
           <div>
             <Image
-              src={"/filter.png"}
+              src={"/cushion2.webp"}
               width={510}
               height={500}
               alt=""
               className=" hidden md:flex"
             />
           </div>
-          <div>
+          {/* <div>
             <Image
               src={"/filter02.png"}
               width={324}
@@ -61,17 +67,17 @@ export default function Herosection() {
               alt=""
               className="md:hidden "
             />
-          </div>
+          </div> */}
           <div>
             <Image
-              src={"/editor2.png"}
-              width={240}
-              height={500}
+              src={"/vase2.webp"}
+              width={440}
+              height={400}
               alt=""
               className=" hidden md:flex"
             />
           </div>
-          <div>
+          {/* <div>
             <Image
               src={"/editor02.png"}
               width={324}
@@ -79,40 +85,40 @@ export default function Herosection() {
               alt=""
               className="md:hidden my-7"
             />
-          </div>
+          </div> */}
           <div className="flex flex-col space-y-5">
             <div>
               <Image
-                src={"/editor3a.png"}
+                src={"/lamp5.webp"}
                 width={240}
                 height={242}
                 alt=""
                 className=" hidden md:flex"
               />
-              <Image
+              {/* <Image
                 src={"/editor03a.png"}
                 width={324}
                 height={242}
                 alt=""
                 className="md:hidden "
-              />
+              /> */}
             </div>
 
             <div>
               <Image
-                src={"/editor3b.png"}
+                src={"/lamp6.webp"}
                 width={240}
                 height={242}
                 alt=""
                 className=" hidden md:flex"
               />
-              <Image
+              {/* <Image
                 src={"/editor03b.png"}
                 width={324}
                 height={242}
                 alt=""
                 className="md:hidden "
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -128,163 +134,9 @@ export default function Herosection() {
             Problems trying to resolve the conflict
           </p>
         </div>
-        {/* CARDS */}
-        <section className="grid grid-cols-1 md:grid-cols-4 md:space-y-0 space-y-5 space-x-0 md:space-x-5 text-center p-24">
-          <div>
-            <Image src={"/herocard011.png"} width={240} height={427} alt="" />
-
-            <div className="flex flex-col">
-              <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
-              <p className="text-gray-400 font-bold mb-3">English Department</p>
-              <p className="text-gray-400  font-bold">
-                $16.48<span className="text-[#23856D] font-bold">$6.48</span>
-              </p>
-              <Image
-                src={"/product-colors.png"}
-                width={82}
-                height={16}
-                alt=""
-                className="md:ml-20 mx-auto"
-              />
-            </div>
-          </div>
-
-          <div>
-            <Image src={"/herocard022.png"} width={240} height={427} alt="" />
-            <div className="flex flex-col">
-              <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
-              <p className="text-gray-400 font-bold mb-3">English Department</p>
-              <p className="text-gray-400  font-bold">
-                $16.48<span className="text-[#23856D] font-bold">$6.48</span>
-              </p>
-              <Image
-                src={"/product-colors.png"}
-                width={82}
-                height={16}
-                alt=""
-                className="md:ml-20 mx-auto"
-              />
-            </div>
-          </div>
-
-          <div>
-            <Image src={"/herocard033.png"} width={240} height={427} alt="" />
-            <div className="flex flex-col">
-              <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
-              <p className="text-gray-400 font-bold mb-3">English Department</p>
-              <p className="text-gray-400  font-bold">
-                $16.48<span className="text-[#23856D] font-bold">$6.48</span>
-              </p>
-              <Image
-                src={"/product-colors.png"}
-                width={82}
-                height={16}
-                alt=""
-                className="md:ml-20 mx-auto"
-              />
-            </div>
-          </div>
-
-          <div>
-            <Image src={"/herocard044.png"} width={240} height={427} alt="" />
-            <div className="flex flex-col">
-              <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
-              <p className="text-gray-400 mr-5 font-bold mb-3">
-                English Department
-              </p>
-              <p className="text-gray-400 ml-5 font-bold">
-                $16.48<span className="text-[#23856D] font-bold">$6.48</span>
-              </p>
-              <Image
-                src={"/product-colors.png"}
-                width={82}
-                height={16}
-                alt=""
-                className="md:ml-20 mx-auto"
-              />
-            </div>
-          </div>
-        </section>
-        {/* CARDS SECTION:02 */}
-
-        <section className="grid grid-cols-1 md:grid-cols-4 md:space-y-0 space-y-5 space-x-0 md:space-x-5 text-center p-24">
-          <div>
-            <Image src={"/herocard055.png"} width={240} height={427} alt="" />
-
-            <div className="flex flex-col">
-              <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
-              <p className="text-gray-400 font-bold mb-3">English Department</p>
-              <p className="text-gray-400  font-bold">
-                $16.48<span className="text-[#23856D] font-bold">$6.48</span>
-              </p>
-              <Image
-                src={"/product-colors.png"}
-                width={82}
-                height={16}
-                alt=""
-                className="md:ml-20 mx-auto"
-              />
-            </div>
-          </div>
-
-          <div>
-            <Image src={"/herocard066.png"} width={240} height={427} alt="" />
-            <div className="flex flex-col">
-              <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
-              <p className="text-gray-400 font-bold mb-3">English Department</p>
-              <p className="text-gray-400  font-bold">
-                $16.48<span className="text-[#23856D] font-bold">$6.48</span>
-              </p>
-              <Image
-                src={"/product-colors.png"}
-                width={82}
-                height={16}
-                alt=""
-                className="md:ml-20 mx-auto"
-              />
-            </div>
-          </div>
-
-          <div>
-            <Image src={"/herocard077.png"} width={240} height={427} alt="" />
-            <div className="flex flex-col">
-              <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
-              <p className="text-gray-400 font-bold mb-3">English Department</p>
-              <p className="text-gray-400  font-bold">
-                $16.48<span className="text-[#23856D] font-bold">$6.48</span>
-              </p>
-              <Image
-                src={"/product-colors.png"}
-                width={82}
-                height={16}
-                alt=""
-                className="md:ml-20 mx-auto"
-              />
-            </div>
-          </div>
-
-          <div>
-            <Image src={"/herocard088.png"} width={240} height={427} alt="" />
-            <div className="flex flex-col">
-              <h1 className="text-gray-900 font-bold my-3">Graphic Design</h1>
-              <p className="text-gray-400 mr-5 font-bold mb-3">
-                English Department
-              </p>
-              <p className="text-gray-400 ml-5 font-bold">
-                $16.48<span className="text-[#23856D] font-bold">$6.48</span>
-              </p>
-              <Image
-                src={"/product-colors.png"}
-                width={82}
-                height={16}
-                alt=""
-                className="md:ml-20 mx-auto"
-              />
-            </div>
-          </div>
-        </section>
+        <HeroCards/>
       </section>
-      <section className="bg-[#23856D] md:h-[570px]  text-white grid grid-cols-1 md:grid-cols-2 ">
+      {/* <section className="bg-[#23856D] md:h-[570px]  text-white grid grid-cols-1 md:grid-cols-2 ">
         <div className="p-20 md:ml-28">
           <h5 className="font-semibold text-sm text-gray-300 mt-5">
             SUMMER 2020
@@ -315,8 +167,8 @@ export default function Herosection() {
             className="md:mt-[73px]"
           />
         </div>
-      </section>
-      <section className=" grid grid-cols-1 md:grid-cols-2 md:space-x-5">
+      </section> */}
+      {/* <section className=" grid grid-cols-1 md:grid-cols-2 md:space-x-5">
         <div className="hidden md:flex">
           <Image src={"/row.png"} width={600} height={682} alt="img" />
         </div>
@@ -345,8 +197,8 @@ export default function Herosection() {
         <div className="md:hidden">
           <Image src={"/herow02.png"} width={600} height={682} alt="img" />
         </div>
-      </section>
-
+      </section> */}
+{/* 
       <section className="flex justify-center mt-28 flex-col text-center">
         <div className="md:px-0 px-16 ">
           <h5 className=" text-[#23A6F0] font-bold ">Practice Advice</h5>
@@ -404,7 +256,7 @@ export default function Herosection() {
             className="md:hidden"
           />
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

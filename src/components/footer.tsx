@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 export default function Footer() {
@@ -7,12 +8,12 @@ export default function Footer() {
     <footer className="mx-auto">
       <section className="grid md:grid-cols-2 md:space-x-[400px] grid-cols-1 p-9  h-[142px] shadow-md bg-[#FAFAFA]">
         <div className="text-black md:ml-5 mb-5 md:mb-0 font-bold text-3xl">
-          Bandage
+          Luxerays
         </div>
         <div className="flex gap-x-6 md:gap-x-3">
-          <FaFacebook className="text-[#23A6F0]" size={24} />
-          <FaInstagram className="text-[#23A6F0]" size={24} />
-          <FaTwitter className="text-blue-400" size={24} />
+         <FaFacebook className="text-black" size={24} />
+          <FaInstagram className="text-black" size={24} />
+          <FaTwitter className="text-black" size={24} />
         </div>
       </section>
       <section className=" grid md:grid-cols-5 grid-cols-1 p-16 mx-auto">
@@ -70,11 +71,10 @@ export default function Footer() {
                 placeholder="Your Email"
                 className="py-6 rounded-tl-sm rounded-bl-sm"
               />
-              <Button
-                type="submit"
-                className=" bg-[#23A6F0] rounded-tr-sm rounded-br-sm py-6"
-              >
+              <Button className=" bg-[#e6c93d] rounded-tr-sm rounded-br-sm py-6"> 
+                <Link href="/contact#contact">
                 Subscribe
+                </Link>
               </Button>
             </div>
             <h6>lorem ipsum dolor amit</h6>

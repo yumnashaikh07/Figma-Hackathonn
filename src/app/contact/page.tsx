@@ -9,7 +9,7 @@ import Headertype2 from "@/components/headertype2";
 import Image from "next/image";
 import { MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import Link from "next/link";
 export default function Contact() {
   return (
     <main className="mx-auto">
@@ -146,10 +146,11 @@ export default function Contact() {
         <h1 className="text-[#252B42] font-bold my-5 text-6xl flex justify-center">
           Let&apos;s Talk
         </h1>
-        <Button className="text-white md:ml-[559px] ml-[100px] px-16 bg-[#23A6F0] w-[106px] h-[22px] py-5 rounded-sm">
-          Try it free now
+        <Button className="text-white md:ml-[559px] ml-[100px] px-16 bg-[#e6c93d] w-[106px] h-[22px] py-5 rounded-sm">
+          <Link href={"/product#contact"}>Try it free now</Link>
         </Button>
       </section>
+      
     </main>
   );
 }
