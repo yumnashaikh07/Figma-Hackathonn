@@ -50,7 +50,6 @@ function PriceFilter({ onFilter }: { onFilter: (range: number[]) => void }) {
             Showing All 12 results
           </h3>
         </div>
-
         <div className="flex justify-between md:mt-0 mt-7  ">
           <h3 className="text-gray-500 font-bold md:ml-28 text-lg mt-2">
             Views: 
