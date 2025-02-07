@@ -1,17 +1,18 @@
-"use client";
+// "use client";
+"use client"
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-
+import { shippingClient } from "@/sanity/lib/shippingclient";
 import { UseCart } from "../../../action/usecart";
 import Swal from "sweetalert2";
 
-export default function PaymentPage() {
+export default function Payment() {
   const router = useRouter();
-  const { cart } = UseCart();
+  const { cart, clearCart } = UseCart(); // Added clearCart for clearing the cart
   const [shippingDetails, setShippingDetails] = useState<any>(null);
-  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string | null>(null);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string>("");
 
   const calculateSubtotal = () => cart.reduce((total, item) => total + item.price * item.quantity, 0);
   const salesTax = 0.1;
@@ -20,25 +21,43 @@ export default function PaymentPage() {
   const total = subtotal + totalTax;
 
   useEffect(() => {
-    // Fetch shipping details from Sanity
     const fetchData = async () => {
-      const details = await fetchShippingDetails();
-      setShippingDetails(details);
+      try {
+        const result = await shippingClient.fetch(
+          `*[_type == "shippingDetails"] | order(_createdAt desc)[0]`
+        );
+        setShippingDetails(result);
+      } catch (err) {
+        console.error("Error fetching shipping details:", err);
+      }
     };
     fetchData();
   }, []);
 
   const handlePayment = () => {
     if (selectedPaymentMethod === "stripe") {
-      router.push("/stripe-payment");
+      localStorage.setItem("orderTotal", total.toFixed(2)); // Save the order total
+      router.push("/stripe-payment"); // Redirect to Stripe's page
     } else if (selectedPaymentMethod === "cod") {
-      Swal.fire("Order Placed Successfully with Cash on Delivery!");
+      Swal.fire({
+        title: "Order Placed Successfully!",
+        text: "Your order has been placed using Cash on Delivery.",
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(() => {
+        clearAll();
+        router.push("/"); 
+      });
     }
+  };
+
+  const clearAll = () => {
+    clearCart(); 
+    setShippingDetails(null); 
   };
 
   return (
     <main className="bg-gray-100 grid grid-cols-1 md:p-10 md:flex md:justify-between">
-      {/* Order Summary */}
       <section className="w-[387px] md:w-[350px] bg-gray-100 p-6 md:border-none border-black border-[1px] md:ml-0 ml-3 md:mr-0 mr-3 rounded-lg shadow-md">
         <h2 className="text-xl font-bold mb-4">Order Summary</h2>
         <div className="space-y-2">
@@ -57,7 +76,7 @@ export default function PaymentPage() {
         </div>
       </section>
 
-      {/* Payment Section */}
+      {/* Shipping Details and Payment Method */}
       <section className="md:w-[700px]">
         <h2 className="text-xl font-bold mb-4">Shipping Details</h2>
         {shippingDetails ? (

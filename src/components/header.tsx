@@ -47,10 +47,10 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href={"/FAQS"}
+              href={"/shop"}
               className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
             >
-             FAQS
+              Shop
             </Link>
           </li>
           <li>
@@ -69,15 +69,11 @@ export default function Header() {
                 <DropdownMenuContent>
                   <DropdownMenuLabel>Categories</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>
-                    <Link href={"/shop"}>Shop</Link>
-                  </DropdownMenuItem>
+          
                   <DropdownMenuItem>
                     <Link href={"/FAQS"}>FAQS</Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    {/* <Link href={"/pricing"}>Pricing</Link> */}
-                  </DropdownMenuItem>
+            
                   <DropdownMenuItem>
                     <Link href={"/team"}>Team</Link>
                   </DropdownMenuItem>

@@ -8,7 +8,7 @@ export default function Herosection() {
     <main>
       <div className="relative md:mb-14 ">
         <Image
-          src={"/herosection1.jpg"}
+          src={"/heroo.jpg"}
           layout="fill"
           objectFit="cover"
           alt=""
@@ -35,7 +35,7 @@ export default function Herosection() {
           <h3 className="md:font-semibold text-xl md:text-lg mb-9 md:mb-5">
             but things on small scale
           </h3>
-          <Button className="bg-[#e6c93d] md:rounded-sm px-16 md:px-9 rounded-lg py-8 md:py-6">
+          <Button className="bg-[#2DC071] md:rounded-sm px-16 md:px-9 rounded-lg py-8 md:py-6">
             <Link href={"/shop"} className="text-xl font-semibold">SHOP NOW</Link>
           </Button>
         </div>

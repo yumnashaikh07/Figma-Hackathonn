@@ -19,7 +19,7 @@ export default function CheckoutPage(){
       const totalTax = subtotal * salesTax;
       const total = subtotal + totalTax;
       const handleProceedToPayemnt = () => {
-        router.push("/checkout.ts");
+        router.push("/payment");
       };
   
       return(
