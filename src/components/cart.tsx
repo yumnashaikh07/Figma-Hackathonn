@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
 export default function Cart () {
   const router = useRouter();
   const {cart, handleDecrement,handleIncrement,handleRemove}=UseCart()
@@ -47,7 +47,7 @@ export default function Cart () {
               cart.map((card) => (
                 <div key={card.slug} className="flex justify-between items-center">
                   <div className="flex items-center space-x-4">
-                    <img
+                    <Image
                       src={card.image}
                       alt={card.title}
                       className="w-16 h-16 object-cover rounded-md"

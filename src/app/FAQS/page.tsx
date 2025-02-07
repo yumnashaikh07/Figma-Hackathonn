@@ -81,7 +81,7 @@ export default function Product() {
     <AccordionItem value="item-3">
     <AccordionTrigger className='text-xl font-bold'>What does your brand offer?</AccordionTrigger>
     <AccordionContent>
-    <p>We specialize in premium home décor products and personalized interior design services. Whether you're looking for unique pieces to enhance your space or need expert guidance to transform your home, we’ve got you covered.</p>
+    <p>We specialize in premium home décor products and personalized interior design services. Whether you&apos;re looking for unique pieces to enhance your space or need expert guidance to transform your home, we&apos;ve got you covered.</p>
     
     </AccordionContent>
   </AccordionItem>
