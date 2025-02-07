@@ -2,11 +2,11 @@ import { Phone } from "lucide-react";
 import {
   FaFacebook,
   FaInstagram,
-  FaPhone,
   FaRegEnvelope,
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import Link from "next/link";
 export default function Herobanner() {
   return (
     <main className=" text-white hidden px-24 text-sm md:flex text-center justify-between h-[50px]">
@@ -26,10 +26,10 @@ export default function Herobanner() {
       </h3>
       <div className="flex gap-x-3 ">
         <h3 className="mt-3">Follow Us :</h3>
-        <FaInstagram className="mt-4" />
-        <FaYoutube className="mt-4" />
-        <FaFacebook className="mt-4" />
-        <FaTwitter className="mt-4" />
+        <Link href={"https://github.com/yumnashaikh07"}><FaInstagram className="mt-4" /></Link>
+        <Link href={"https://github.com/yumnashaikh07/NEXTJS-DESIGN-JAM-2025"}><FaYoutube className="mt-4" /></Link>
+        <Link href={"https://github.com/yumnashaikh07/NEXTJS-DESIGN-JAM-2025-market-place"}><FaFacebook className="mt-4" /></Link>
+        <Link href={"https://www.linkedin.com/in/yumna-shaikh-b90191337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}><FaTwitter className="mt-4" /></Link>
       </div>
     </main>
   );

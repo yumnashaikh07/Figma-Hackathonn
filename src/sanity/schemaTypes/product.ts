@@ -108,5 +108,13 @@ export const product = defineType({
       type: "boolean",
       description: "Indicate if the product is new",
     },
+    {
+      name: "stockQuantity",
+      title: "Stock Quantity",
+      type: "number",
+      validation: (Rule) => Rule.required().min(0).error("Stock quantity must be a non-negative number"),
+    }
+    
+    
   ],
 });

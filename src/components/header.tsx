@@ -8,32 +8,28 @@ import {
 } from "@/components/ui/dropdown-menu";
 import {
   Command,
-  CommandDialog,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
 } from "@/components/ui/command"
-
+import Cart from "./cart";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   ChevronDown,
-  Heart,
-  Search,
-  ShoppingCart,
   AlignRight,
   User,
 } from "lucide-react";
 import Link from "next/link";
+import WishList from "./wishlist";
 export default function Header() {
   return (
-    <main className="flex py-7 p-9 justify-between space-x-10 h-24 shadow-lg">
+    <main className="flex py-7 p-9 justify-between space-x-3 h-24 shadow-lg">
       <div className="text-black font-bold text-3xl ">Luxerays</div>
       <nav>
-        <ul className="md:flex gap-x-5 hidden  mt-3  text-lg">
+        <ul className="md:flex gap-x-5 hidden ml-36 mt-3  text-lg">
           <li>
             <Link
               href={"/"}
@@ -51,7 +47,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href={"/product"}
+              href={"/FAQS"}
               className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
             >
              FAQS
@@ -77,10 +73,10 @@ export default function Header() {
                     <Link href={"/shop"}>Shop</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link href={"/product"}>Product</Link>
+                    <Link href={"/FAQS"}>FAQS</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link href={"/pricing"}>Pricing</Link>
+                    {/* <Link href={"/pricing"}>Pricing</Link> */}
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <Link href={"/team"}>Team</Link>
@@ -91,16 +87,12 @@ export default function Header() {
         </ul>
       </nav>
       <div>
-        <div className="hidden md:flex gap-x-3 ml-10 mt-3  text-[#252B42] ">
+        <div className="hidden md:flex gap-x-3 ml-14 mt-3  text-[#252B42] ">
           <User />
-          <h3 className="md:font-bold ">Login/Register</h3>
-          <Search />
-          <Link href={""}>
-            <ShoppingCart size={24} />
-          </Link>
-          <Link href={""}>
-            <Heart size={24} />
-          </Link>
+          <h3 className="md:font-bold"><Link href={"/signup"}>SignUp</Link>/<Link href={"/signin"}>SignIn</Link></h3>
+          <Cart/>
+            <WishList/>
+     
         </div>
       </div>
 
@@ -156,7 +148,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href={"/product"}
+                    href={"/FAQS"}
                     className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
                   >
                   FAQS
@@ -183,15 +175,17 @@ export default function Header() {
             <div className="flex text-center flex-col gap-y-5 font-semibold text-3xl mt-7 text-[#252B42] ">
               <div className="flex justify-between ">
                 <User className=" ml-7 mt-1" size={30} />
-                <h5 className="font-base mr-11">Login/Register</h5>
+                <h5 className="font-base mr-11"><Link href={"/signup"}>SignUp</Link>/<Link href={"/signin"}>SignIn</Link></h5>
               </div>
-              <Search size={42} className="ml-36" />
+              {/* <Search size={42} className="ml-36" /> */}
               <Link href={""} className="flex justify-between">
-                <ShoppingCart size={42} className="ml-36" />
+                {/* <ShoppingCart size={42} className="ml-36" /> */}
+                <Cart/>
                 <p className="text-xs mr-32 mt-7">1</p>
               </Link>
               <Link href={""} className="flex justify-between">
-                <Heart size={42} className="ml-36" />
+                {/* <Heart size={42} className="ml-36 " /><Cart/> */}
+                <WishList/>
                 <p className="text-xs mr-32 mt-7">1</p>
               </Link>
             </div>

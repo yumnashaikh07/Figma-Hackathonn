@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 export default function Product() {
   return (
     <main className="mx-auto flex justify-between p-20">
-      <section id="contact" className="bg-black h-[500px]  md:w-[500px]  ">
+      <section id="contact" className="bg-black h-[500px] w-full max-w-[500px]   md:w-[500px]  ">
           <div className="container mx-auto py-14 px-16">
             <h2 className="text-3xl font-bold text-center text-white mb-8">
               Contact Us
@@ -65,44 +65,59 @@ export default function Product() {
                   className="mb-3 w-full border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-red-600  bg-transparent"
                 />
               </div>
-              <button
+              <Button
                 type="submit"
-                className=" text-base hover:text-red-600  text-white "
-              >
+                className=" text-base hover:text-red-600  text-white">
                 Send Message
-              </button>
+              </Button>
             </form>
           </div>
         </section>
-        <section>
-        <Accordion type="single" collapsible className="" >
+        <section className="w-full max-w-[500px] flex-shrink-0">
+        <Accordion type="multiple" >
   <AccordionItem value="item-1">
-    <AccordionTrigger className='text-xl font-bold'>FAQS</AccordionTrigger>
+    <AccordionTrigger className='text-3xl font-bold p-10'>FAQS<span className='text-base '>YOUR MOST ASKED QUESTIONS HERE!</span></AccordionTrigger>
     <AccordionContent>
     <AccordionItem value="item-3">
-    <AccordionTrigger className='text-xl font-bold'>FAQS</AccordionTrigger>
+    <AccordionTrigger className='text-xl font-bold'>What does your brand offer?</AccordionTrigger>
     <AccordionContent>
-    
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-4">
-    <AccordionTrigger className='text-xl font-bold'>FAQS</AccordionTrigger>
-    <AccordionContent>
+    <p>We specialize in premium home décor products and personalized interior design services. Whether you're looking for unique pieces to enhance your space or need expert guidance to transform your home, we’ve got you covered.</p>
     
     </AccordionContent>
   </AccordionItem>
   <AccordionItem value="item-5">
-    <AccordionTrigger className='text-xl font-bold'>FAQS</AccordionTrigger>
+    <AccordionTrigger className='text-xl font-bold'>What makes your products and services unique?</AccordionTrigger>
     <AccordionContent>
-    
+                      <p>Our products are carefully curated for quality, style, and sustainability. Our interior design services focus on creating functional and aesthetically pleasing spaces tailored to your preferences.
+
+</p>
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="item-7">
+    <AccordionTrigger className='text-xl font-bold'>How can I contact your team?</AccordionTrigger>
+    <AccordionContent>
+    <p>You can reach us through:</p>
+<ul>
+<li>Email: support@yourbrand.com</li>
+<li>Phone: +1 (123) 456-7890</li>
+<li>Social Media: @yourbrand on Instagram and Facebook</li>
+</ul>
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="item-9">
+    <AccordionTrigger className='text-xl font-bold'>Can I request a completely customized interior design solution?
+
+
+</AccordionTrigger>
+    <AccordionContent>
+                      <p>Yes, we specialize in tailoring designs to fit your unique vision, preferences, and lifestyle.</p>
     </AccordionContent>
   </AccordionItem>
     </AccordionContent>
   </AccordionItem>
 </Accordion>
-{/* <div className='space-x-5'>
-<Button className="bg-[#e6c93d] mt-5 text-base md:rounded-sm px-16 md:px-9 rounded-lg py-8 md:py-6">Add to Cart</Button>
-<Button className="text-[#e6c93d]  bg-white border-[#e6c93d] border-[3px] mt-5 text-base md:rounded-sm px-16 md:px-5 rounded-lg py-8 md:py-6">Add to Wishlist</Button></div> */}
 
         </section>
     </main>

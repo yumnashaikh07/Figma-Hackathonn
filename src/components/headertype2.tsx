@@ -19,26 +19,26 @@ export default function Headertype2() {
             </li>
             <li>
               <Link
-                href={"/product"}
+                href={"/FAQS"}
                 className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
               >
-                Product
+               FAQS
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href={"/pricing"}
                 className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
               >
                 Pricing
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
-                href={"/contact"}
+                href={"/shop"}
                 className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
               >
-                Contact
+                Shop
               </Link>
             </li>
           </ul>
@@ -65,20 +65,20 @@ export default function Headertype2() {
                   </li>
                   <li>
                     <Link
-                      href={"/product"}
+                      href={"/FAQS"}
                       className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
                     >
-                      Product
+                    FAQS
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href={"/pricing"}
                       className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
                     >
                       Pricing
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       href={"/contact"}
@@ -92,10 +92,10 @@ export default function Headertype2() {
             </SheetContent>
           </Sheet>
         </div>
-        <div className="md:flex hidden gap-x-3 text-[#23A6F0] ">
-          <h3 className="font-semibold mt-1">Login</h3>
-          <Button className="text-white bg-[#23A6F0]">
-            Become a member <ArrowRight />
+        <div className="md:flex hidden gap-x-3 text-[#e6c93d]  ">
+          <h3 className="font-semibold mt-1"><Link href={"/signin"}>SignIn</Link></h3>
+          <Button className="text-white bg-[#e6c93d]" >
+           <Link href={"/signup"}>Become a member</Link>  <ArrowRight />
           </Button>
         </div>
       </header>

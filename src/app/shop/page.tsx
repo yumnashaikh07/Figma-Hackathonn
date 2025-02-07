@@ -1,19 +1,3 @@
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-
-import Image from "next/image";
 import Herobanner from "@/components/herobanner";
 import Header from "@/components/header";
 import ShopCards from "@/components/shopcard";
@@ -25,7 +9,27 @@ export default function Shop() {
         <Herobanner />
       </div>
       <Header />
-      <section className="bg-gray-50 md:px-0 px-11">
+      <ShopCards />
+      <ShopPagination />
+    </main>
+  );
+}
+
+
+
+
+// FIGMA HACKATHON CODE
+// import {
+//   Breadcrumb,
+//   BreadcrumbItem,
+//   BreadcrumbLink,
+//   BreadcrumbList,
+//   BreadcrumbSeparator,
+// } from "@/components/ui/breadcrumb";
+
+// import Image from "next/image";
+{
+  /* <section className="bg-gray-50 md:px-0 px-11">
         <header className="grid grid-cols-1 md:grid-cols-2  md:px-0 px-11  md:mx-16">
           <div className=" py-7 md:px-0 px-16  md:justify-between h-24">
             <h1 className="text-black  font-bold text-xl md:text-3xl">Shop</h1>
@@ -45,10 +49,10 @@ export default function Shop() {
           </Breadcrumb>
         </header>
     
-      </section>
-<ShopCards/>
-<ShopPagination />
-      <section className=" bg-gray-50 p-20">
+      </section> */
+}
+{
+  /* <section className=" bg-gray-50 p-20">
         <div className="flex justify-center text-center flex-col">
           <h1 className="text-gray-700 font-bold text-3xl mb-3">
             Big Companies Are Here
@@ -104,8 +108,5 @@ export default function Shop() {
             className=" md:w-[150px] md:h-[190px] h-[290px] w-[250px]"
           />
         </div>
-      </section>
-      
-    </main>
-  );
+      </section> */
 }
