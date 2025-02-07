@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { client } from "@/sanity/lib/client";
+import { shippingClient } from "@/sanity/lib/shippingclient";
 
 const formSchema = z.object({
   firstName: z.string().min(1, "First Name is required").max(50, "First Name must be 50 characters or less"),
@@ -34,7 +35,7 @@ export default function SignUp() {
   });
 
   async function onSubmit(values: FormType) {
-   try{ await client.create({
+   try{ await shippingClient.create({
       _type: "signupForm",
       name: values.firstName,
       email: values.email,
@@ -68,8 +69,6 @@ export default function SignUp() {
               </FormItem>
             )}
           />
-
-          {/* Email Field */}
           <FormField
             control={form.control}
             name="email"

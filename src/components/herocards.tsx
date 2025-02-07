@@ -1,6 +1,10 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
+import { Button } from "./ui/button"
+import { UseCart } from "../../action/usecart"
 interface CardsType{
+    quantity?: number;
     image:string,
     title:string,
     description:string,
@@ -95,10 +99,11 @@ const Cards: CardsType[] =[
   
 ]
 export default function HeroCards (){
+    const AddToCart = UseCart((state) => state.AddToCart);
  return(
     <main className="grid grid-cols-1 md:grid-cols-4  md:space-y-0 space-y-5 space-x-0 md:space-x-5 text-center p-24 ">
         {Cards.map((card, index) =>(
-            <div key={index} className="flex flex-col  items-center">
+            <div key={index} className="flex flex-col shadow-2xl p-5  items-center">
                 <Link href={`/shop/${card.slug}`}>
                     <Image src={card.image} alt="hero card" width={240} height={427}/>
                 </Link>
@@ -110,7 +115,11 @@ export default function HeroCards (){
                     
                     <div className="flex space-x-[3px] md:mb-20 ">{card.colors.map((color, index) =>(
                         <div key={index} className="w-5 h-5 rounded-full " style={{backgroundColor:color}}></div>
+                        
                     ))}</div>
+                    <Button onClick={() => AddToCart({ ...card, quantity: card.quantity ?? 1 })} className="mt-3 bg-[#e6c93d] text-white px-4 py-2 rounded">
+              Add to Cart
+            </Button>
                 </div>
         ))}
     </main>
