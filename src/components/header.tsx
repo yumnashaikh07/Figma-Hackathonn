@@ -14,14 +14,10 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/command"
+} from "@/components/ui/command";
 import Cart from "./cart";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import {
-  ChevronDown,
-  AlignRight,
-  User,
-} from "lucide-react";
+import { ChevronDown, AlignRight, ShoppingCart , Heart,User } from "lucide-react";
 import Link from "next/link";
 import WishList from "./wishlist";
 export default function Header() {
@@ -33,7 +29,8 @@ export default function Header() {
           <li>
             <Link
               href={"/"}
-              className=" text-gray-500  hover:text-gray-600 hover:font-semibold">
+              className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
+            >
               Home
             </Link>
           </li>
@@ -62,39 +59,42 @@ export default function Header() {
             </Link>
           </li>
           <li>
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex text-gray-500  hover:text-gray-600 hover:font-semibold">
-                  Shop<ChevronDown className="mt-1" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuLabel>Categories</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-          
-                  <DropdownMenuItem>
-                    <Link href={"/FAQS"}>FAQS</Link>
-                  </DropdownMenuItem>
-            
-                  <DropdownMenuItem>
-                    <Link href={"/team"}>Team</Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex text-gray-500  hover:text-gray-600 hover:font-semibold">
+                Shop
+                <ChevronDown className="mt-1" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuLabel>Categories</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+
+                <DropdownMenuItem>
+                  <Link href={"/FAQS"}>FAQS</Link>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem>
+                  <Link href={"/team"}>Team</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </li>
         </ul>
       </nav>
       <div>
         <div className="hidden md:flex gap-x-3 ml-14 mt-3  text-[#252B42] ">
           <User />
-          <h3 className="md:font-bold"><Link href={"/signup"}>SignUp</Link>/<Link href={"/signin"}>SignIn</Link></h3>
-          <Cart/>
-            <WishList/>
-     
+          <h3 className="md:font-bold">
+            <Link href={"/signup"}>SignUp</Link>/
+            <Link href={"/signin"}>SignIn</Link>
+          </h3>
+          <Cart />
+          <WishList />
         </div>
       </div>
 
       {/* SMALL SCREEN SHEET SECTION */}
 
-      <div className="md:hidden">
+      <div className="md:hidden flex">
         <Sheet>
           <SheetTrigger>
             <AlignRight className="mb-3" size={24} />
@@ -110,29 +110,29 @@ export default function Header() {
                     Home
                   </Link>
                 </li>
-                <li >
-                    <DropdownMenu>
-                      <DropdownMenuTrigger className=" ml-[115px] flex text-gray-500  hover:text-gray-600  hover:font-semibold">
-                        Shop
-                        <ChevronDown className="mt-1 " />
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent>
-                        <DropdownMenuLabel>Categories</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>
-                          <Link href={"/shop"}>Shop</Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                          <Link href={"/product"}>Product</Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                          <Link href={"/pricing"}>Pricing</Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                          <Link href={"/team"}>Team</Link>
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
+                <li>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger className=" ml-[115px] flex text-gray-500  hover:text-gray-600  hover:font-semibold">
+                      Shop
+                      <ChevronDown className="mt-1 " />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      <DropdownMenuLabel>Categories</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem>
+                        <Link href={"/shop"}>Shop</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <Link href={"/product"}>Product</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <Link href={"/pricing"}>Pricing</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <Link href={"/team"}>Team</Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </li>
                 <li>
                   <Link
@@ -147,7 +147,7 @@ export default function Header() {
                     href={"/FAQS"}
                     className=" text-gray-500  hover:text-gray-600 hover:font-semibold"
                   >
-                  FAQS
+                    FAQS
                   </Link>
                 </li>
                 <li>
@@ -171,41 +171,47 @@ export default function Header() {
             <div className="flex text-center flex-col gap-y-5 font-semibold text-3xl mt-7 text-[#252B42] ">
               <div className="flex justify-between ">
                 <User className=" ml-7 mt-1" size={30} />
-                <h5 className="font-base mr-11"><Link href={"/signup"}>SignUp</Link>/<Link href={"/signin"}>SignIn</Link></h5>
+                <h5 className="font-base mr-11">
+                  <Link href={"/signup"}>SignUp</Link>/
+                  <Link href={"/signin"}>SignIn</Link>
+                </h5>
               </div>
               {/* <Search size={42} className="ml-36" /> */}
-              <Link href={""} className="flex justify-between">
-                {/* <ShoppingCart size={42} className="ml-36" /> */}
-                <Cart/>
+              <Link href={"/cartdetailpage"} className="flex justify-between">
+                <ShoppingCart size={42} className="ml-36" />
+                {/* <Cart /> */}
                 <p className="text-xs mr-32 mt-7">1</p>
               </Link>
               <Link href={""} className="flex justify-between">
-                {/* <Heart size={42} className="ml-36 " /><Cart/> */}
-                <WishList/>
+                <Heart size={42} className="ml-36 "/>
+                {/* <WishList /> */}
                 <p className="text-xs mr-32 mt-7">1</p>
               </Link>
             </div>
           </SheetContent>
         </Sheet>
       </div>
+      <div className="hidden md:flex">
       <Command>
-  <CommandInput placeholder="Search..." className="md:flex hidden" />
-  <CommandList>
-    <CommandEmpty>No results found.</CommandEmpty>
-    <CommandGroup heading="Shop" >
-      <CommandItem><Link href={"/shop"}>Shop</Link></CommandItem>
-      <CommandItem>Search Emoji</CommandItem>
-      <CommandItem>Calculator</CommandItem>
-    </CommandGroup>
-    <CommandSeparator />
-    <CommandGroup heading="Settings">
-      <CommandItem>Profile</CommandItem>
-      <CommandItem>Billing</CommandItem>
-      <CommandItem>Settings</CommandItem>
-    </CommandGroup>
-  </CommandList>
-</Command>
-
+        <CommandInput placeholder="Search..." className="md:flex hidden" />
+        <CommandList>
+          <CommandEmpty>No results found.</CommandEmpty>
+          <CommandGroup heading="Shop">
+            <CommandItem>
+              <Link href={"/shop"}>Shop</Link>
+            </CommandItem>
+            <CommandItem>Search Emoji</CommandItem>
+            <CommandItem>Calculator</CommandItem>
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="Settings">
+            <CommandItem>Profile</CommandItem>
+            <CommandItem>Billing</CommandItem>
+            <CommandItem>Settings</CommandItem>
+          </CommandGroup>
+        </CommandList>
+      </Command>
+      </div>
     </main>
   );
 }

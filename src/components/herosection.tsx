@@ -41,8 +41,8 @@ export default function Herosection() {
         </div>
       </div>
 
-      <section className="bg-[#fff] md:py-0 py-44 px-11 md:px-0 md:p-28">
-        <div className="flex flex-col text-center">
+      <section className="bg-[#fff] md:flex hidden  md:py-0 py-44 px-11 md:px-0 md:p-28">
+        <div className=" flex-col text-center">
           <h1 className="font-bold  md:mt-5 mt-16 text-3xl">EDITORS PICK</h1>
           <p className="text-[#737373] mb-9">
             Problems trying to resolve the conflict
@@ -129,7 +129,7 @@ export default function Herosection() {
           <h5 className="text-xl font-semibold  mt-16 text-[#737373]">
             Featured Products
           </h5>
-          <h1 className="font-bold text-3xl  my-3">BESTSELLER PRODUCTS</h1>
+          <h1 className="font-bold text-3xl mt-10 md:mt-0 my-0 md:my-3">BESTSELLER PRODUCTS</h1>
           <p className="text-[#737373]">
             Problems trying to resolve the conflict
           </p>

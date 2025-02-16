@@ -51,6 +51,8 @@ export default function Cart () {
                       src={card.image}
                       alt={card.title}
                       className="w-16 h-16 object-cover rounded-md"
+                      width={200}
+                      height={200}
                     />
                     <div>
                       <h4 className="font-semibold">{card.title}</h4>

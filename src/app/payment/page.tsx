@@ -1,4 +1,3 @@
-// "use client";
 "use client"
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -10,7 +9,7 @@ import Swal from "sweetalert2";
 
 export default function Payment() {
   const router = useRouter();
-  const { cart, clearCart } = UseCart(); // Added clearCart for clearing the cart
+  const { cart, clearCart } = UseCart(); 
   const [shippingDetails, setShippingDetails] = useState<any>(null);
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string>("");
 
@@ -36,8 +35,8 @@ export default function Payment() {
 
   const handlePayment = () => {
     if (selectedPaymentMethod === "stripe") {
-      localStorage.setItem("orderTotal", total.toFixed(2)); // Save the order total
-      router.push("/stripe-payment"); // Redirect to Stripe's page
+      localStorage.setItem("orderTotal", total.toFixed(2)); 
+      router.push("/stripe-payment");
     } else if (selectedPaymentMethod === "cod") {
       Swal.fire({
         title: "Order Placed Successfully!",
@@ -75,8 +74,6 @@ export default function Payment() {
           </div>
         </div>
       </section>
-
-      {/* Shipping Details and Payment Method */}
       <section className="md:w-[700px]">
         <h2 className="text-xl font-bold mb-4">Shipping Details</h2>
         {shippingDetails ? (
