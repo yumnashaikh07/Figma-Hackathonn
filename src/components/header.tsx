@@ -22,7 +22,7 @@ import Link from "next/link";
 import WishList from "./wishlist";
 export default function Header() {
   return (
-    <main className="flex py-7 p-9 justify-between space-x-3 h-24 shadow-lg">
+    <main className="fixed top-0 mt-10 left-0 w-full z-50 bg-transparent flex py-7 p-9 justify-between space-x-3 h-24 shadow-lg">
       <div className="text-black font-bold text-3xl ">Luxerays</div>
       <nav>
         <ul className="md:flex gap-x-5 hidden ml-36 mt-3  text-lg">
@@ -94,12 +94,20 @@ export default function Header() {
 
       {/* SMALL SCREEN SHEET SECTION */}
 
-      <div className="md:hidden flex">
+      <div className="md:hidden flex space-x-3 items-center">
+          {/* <Link href={"/cartdetailpage"} >
+                <ShoppingCart size={24} /> */}
+                <Cart />
+          {/* </Link> */}
+          <Link href={""} >
+                <Heart size={24} />
+                {/* <WishList /> */}
+          </Link>
         <Sheet>
           <SheetTrigger>
-            <AlignRight className="mb-3" size={24} />
+            <AlignRight  size={24} />
           </SheetTrigger>
-          <SheetContent>
+          <SheetContent >
             <nav>
               <ul className="text-center mt-20 space-y-5 font-bold text-3xl">
                 <li>
@@ -176,17 +184,7 @@ export default function Header() {
                   <Link href={"/signin"}>SignIn</Link>
                 </h5>
               </div>
-              {/* <Search size={42} className="ml-36" /> */}
-              <Link href={"/cartdetailpage"} className="flex justify-between">
-                <ShoppingCart size={42} className="ml-36" />
-                {/* <Cart /> */}
-                <p className="text-xs mr-32 mt-7">1</p>
-              </Link>
-              <Link href={""} className="flex justify-between">
-                <Heart size={42} className="ml-36 "/>
-                {/* <WishList /> */}
-                <p className="text-xs mr-32 mt-7">1</p>
-              </Link>
+            
             </div>
           </SheetContent>
         </Sheet>

@@ -10,6 +10,7 @@
 //   BreadcrumbList,
 //   BreadcrumbSeparator,
 // } from "@/components/ui/breadcrumb";
+import Header from "@/components/header";
 import {
   Accordion,
   AccordionContent,
@@ -19,9 +20,12 @@ import {
 import { Button } from "@/components/ui/button";
 export default function Product() {
   return (
-    <main className="mx-auto flex justify-between p-20">
-      <section id="contact" className="bg-black h-[500px] w-full max-w-[500px]   md:w-[500px]  ">
-          <div className="container mx-auto py-14 px-16">
+    
+    <main  >
+    <Header/>
+    <section className="mx-auto md:flex md:justify-between md:px-20 md:py-40">
+      <div  id="contact" className="bg-black h-[500px] w-full max-w-[500px]   md:w-[500px]  ">
+          <div className="container mx-auto md:mt-0 mt-40 py-14 px-16">
             <h2 className="text-3xl font-bold text-center text-white mb-8">
               Contact Us
             </h2>
@@ -72,11 +76,12 @@ export default function Product() {
               </Button>
             </form>
           </div>
-        </section>
-        <section className="w-full max-w-[500px] flex-shrink-0">
+          </div>
+        
+        <section className="md:px-0 px-10 w-full max-w-[500px] flex-shrink-0">
         <Accordion type="multiple" >
   <AccordionItem value="item-1">
-    <AccordionTrigger className='text-3xl font-bold p-10'>FAQS<span className='text-base '>YOUR MOST ASKED QUESTIONS HERE!</span></AccordionTrigger>
+    <AccordionTrigger className='md:text-3xl text-2xl font-bold md:py-0 py-9 md:p-10'>FAQS<span className='md:text-base text-xs '>YOUR MOST ASKED QUESTIONS HERE!</span></AccordionTrigger>
     <AccordionContent>
     <AccordionItem value="item-3">
     <AccordionTrigger className='text-xl font-bold'>What does your brand offer?</AccordionTrigger>
@@ -118,7 +123,7 @@ export default function Product() {
     </AccordionContent>
   </AccordionItem>
 </Accordion>
-
+        </section>
         </section>
     </main>
   );

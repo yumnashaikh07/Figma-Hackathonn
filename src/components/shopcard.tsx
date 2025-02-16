@@ -64,7 +64,7 @@ function PriceFilter({ onFilter }: { onFilter: (range: number[]) => void }) {
 
   return (
     <>
-      <section className="grid grid-cols-1 md:grid-cols-3 md:px-0 px-20  py-0 md:py-3 ">
+      <section className="grid grid-cols-1 md:grid-cols-3 md:px-0 px-20 mt-32 md:mt-10  py-0 md:py-3 ">
         <Accordion type="single" collapsible>
           <AccordionItem
             value="item-1"

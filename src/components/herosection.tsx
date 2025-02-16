@@ -35,13 +35,13 @@ export default function Herosection() {
           <h3 className="md:font-semibold text-xl md:text-lg mb-9 md:mb-5">
             but things on small scale
           </h3>
-          <Button className="bg-[#e6c93d] md:rounded-sm px-16 md:px-9 rounded-lg py-8 md:py-6">
+          <Button className="md:bg-[#e6c93d] bg-green-500 md:rounded-sm px-16 md:px-9 rounded-lg py-8 md:py-6">
             <Link href={"/shop"} className="text-xl font-semibold">SHOP NOW</Link>
           </Button>
         </div>
       </div>
 
-      <section className="bg-[#fff] md:flex hidden  md:py-0 py-44 px-11 md:px-0 md:p-28">
+      <section className="bg-[#fff] hidden md:flex md:flex-col md:py-0 py-44 px-11 md:px-0 md:p-28">
         <div className=" flex-col text-center">
           <h1 className="font-bold  md:mt-5 mt-16 text-3xl">EDITORS PICK</h1>
           <p className="text-[#737373] mb-9">

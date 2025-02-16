@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { useParams } from "next/navigation";
+import Header from "@/components/header";
 
 interface Product {
   productImage: {
@@ -67,7 +68,8 @@ const ProductList = () => {
 
   if (loading) {
     return (
-      <section className="p-10">
+      
+      <section className="p-14">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="">
             <Skeleton className="w-full h-[430px] rounded-lg" />
@@ -79,16 +81,18 @@ const ProductList = () => {
           
         </div>
       </section>
+     
     );
   }
 
   if (!products.length) return <div>No products found.</div>;
 
   return (
+    <main><Header/>
     <section>
       {products.map((product) => (
         <div key={product.slug}>
-          <div className="p-20 mr-28 space-x-5 grid grid-cols-1 md:flex md:justify-between">
+          <div className="p-20 mr-28 mt-16 space-x-5 grid grid-cols-1 md:flex md:justify-between">
             <div className="w-full md:w-1/2 flex-shrink-0">
               <Image
                 src={product.productImage.asset.url}
@@ -144,6 +148,7 @@ const ProductList = () => {
         </div>
       ))}
     </section>
+    </main>
   );
 };
 
